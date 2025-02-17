@@ -374,18 +374,26 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-block ((t (:inherit org-code))))
    `(org-code ((t (:inherit (shadow fixed-pitch-serif)))))
    `(org-date ((t (:inherit fixed-pitch-serif))))
+   `(org-drawer ((t nil)))
    `(org-document-info ((t (:inherit org-meta-line))))
    `(org-document-info-keyword ((t (:inherit org-document-info))))
    `(org-document-title ((t nil)))
    `(org-done ((t nil)))
    `(org-ellipsis ((t nil)))
    `(org-footnote ((t nil)))
+   `(org-formula  ((t nil)))
    `(org-hide ((t (:foreground ,yellow-pale))))
+   `(org-macro ((t nil)))
    `(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
    `(org-priority ((t (:inherit fixed-pitch))))
    `(org-table ((t (:inherit fixed-pitch))))
    `(org-tag ((t (:inherit fixed-pitch))))
    `(org-todo ((t nil)))
+
+   ;; org-agenda
+   `(org-agenda-structure ((t nil)))
+   `(org-scheduled-previously ((t (:foreground ,red-dark))))
+   `(org-scheduled-today ((t (:foreground ,green-dark))))
 
    ;; eshell
    `(eshell-ls-archive ((t nil)))
@@ -445,7 +453,10 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(sly-warning-face ((t (:inherit acme-theme-warning))))
    `(sly-error-face ((t (:inherit acme-theme-error))))
    `(sly-mode-line ((t nil)))
-   ))
+
+   ;; mmm-mode
+   `(mmm-default-submode-face ((t nil)))))
+
 
 (acme-theme-with-color-variables
   (custom-theme-set-variables
@@ -522,8 +533,8 @@ Also bind `class' to ((class color) (min-colors 89))."
     (add-hook 'eww-mode-hook #'acme-theme-white-background)
     ;; looks like faces(1)
     (add-hook 'calendar-mode-hook (lambda () (acme-theme-white-background frost-pale)))
-    (add-hook 'display-time-world-mode-hook (lambda () (acme-theme-white-background frost-pale)))
-    ))
+    (add-hook 'display-time-world-mode-hook (lambda () (acme-theme-white-background frost-pale)))))
+
 
 ;;; patch `tooltip-show' to allow customizing border-color
 (define-advice tooltip-show (:override (text &optional use-echo-area) dont-ignore)
