@@ -361,14 +361,14 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(notmuch-tag-unread ((t (:foreground ,red-deep :weight bold)))) ; too important
 
    ;; outline
-   `(outline-level-1 ((t nil)))
-   `(outline-level-2 ((t nil)))
-   `(outline-level-3 ((t nil)))
-   `(outline-level-4 ((t nil)))
-   `(outline-level-5 ((t nil)))
-   `(outline-level-6 ((t nil)))
-   `(outline-level-7 ((t nil)))
-   `(outline-level-8 ((t nil)))
+   `(outline-1 ((t nil)))
+   `(outline-2 ((t nil)))
+   `(outline-3 ((t nil)))
+   `(outline-4 ((t nil)))
+   `(outline-5 ((t nil)))
+   `(outline-6 ((t nil)))
+   `(outline-7 ((t nil)))
+   `(outline-8 ((t nil)))
 
    ;; org
    `(org-block ((t (:inherit org-code))))
