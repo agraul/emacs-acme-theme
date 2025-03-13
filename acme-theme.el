@@ -162,7 +162,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    'acme
    ;; basic
    `(default ((t (:foreground ,black :background ,yellow-pale))))
-   `(success ((t (:foreground ,green))))
+   `(success ((t (:foreground ,green-dark))))
    `(warning ((t (:foreground ,red-dark))))
    `(error ((t (:foreground ,red-deep))))
    `(homoglyph ,(acme-theme-alternative `((t :foreground ,frost))))
