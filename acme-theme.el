@@ -206,6 +206,11 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(header-line ((t (:inherit mode-line))))
    `(header-line-highlight ((t (:inherit mode-line))))
 
+   ;; tab bar
+   `(tab-bar ((t (:inherit mode-line))))
+   `(tab-bar-tab ((t (:inherit tab-bar :underline t))))
+   `(tab-bar-tab-inactive ((t (:inherit tab-bar))))
+
    ;; syntax highlighting :^)
    `(font-lock-builtin-face ((t nil)))
    `(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
